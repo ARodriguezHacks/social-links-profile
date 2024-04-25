@@ -1,0 +1,24 @@
+:root {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body.app {
+}
+
+main {
+  background: pink;
+
+  & h1 {
+    color: teal;
+  }
+
+  & button {
+    background: #e9e99a;
+  }
+}

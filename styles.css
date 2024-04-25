@@ -1,24 +1,55 @@
 :root {
   box-sizing: border-box;
+  color: #fff;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
 body.app {
+  background: #141414;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
 }
 
 main {
-  background: pink;
+  background: #1f1f1f;
+  max-width: 30%;
+  border-radius: 10px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  & div.avatar-container {
+
+    & img {
+      border-radius: 100px;
+    }
+  }
 
   & h1 {
-    color: teal;
+    /* color: teal; */
   }
 
   & button {
     background: #e9e99a;
   }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

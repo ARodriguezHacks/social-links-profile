@@ -17,7 +17,7 @@
 
 :root {
   box-sizing: border-box;
-  /* color: #fff; */
+  font-size: 14px;
   font-family: "Inter";
   --color-primary: hsl(75, 94%, 57%);
   --color-neutral-white: hsl(0, 0%, 100%);
@@ -25,7 +25,7 @@
   --color-neutral-grey: hsl(0, 0%, 20%);
   --color-neutral-dark-grey: hsl(0, 0%, 12%);
   --color-neutral-off-black: hsl(0, 0%, 8%);
-  --color-attribution-link: hsl(228, 45%, 44%);
+  --color-attribution-link: hsl(201.27deg 45% 44%);
 }
 
 *,
@@ -40,7 +40,6 @@
 
 body.app {
   background: var(--color-neutral-off-black);
-  position: relative;
   display: flex;
   flex-direction: column;
   margin: 50px 0;
@@ -49,39 +48,39 @@ body.app {
 
 main {
   background: var(--color-neutral-dark-grey);
-  max-width: 90%;
   border-radius: 10px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  margin: 0 auto;
   text-align: center;
-  padding: 30px 0;
+  padding: 24px;
 
   @media (min-width: 768px) {
-    max-width: 30%;
+    padding: 40px;
+    width: 384px;
   }
 
   & div.avatar-container {
     & img {
-      border-radius: 100px;
+      border-radius: 50%;
       width: 30%;
     }
   }
 
   & div.copy {
-    margin: 30px 0;
+    margin: 24px 0;
 
     & p.copy-location {
       color: var(--color-primary);
       font-weight: bold;
-      font-size: 19px;
+      font-size: 16px;
     }
 
-    & p.copy-quote {
-      margin: 40px 0 25px;
-      color: var(--color-neutral-light-white);
+    & div.copy-quote-container {
+      margin-top: 24px;
+
+      & p.copy-quote {
+        margin-top: 24px;
+        color: var(--color-neutral-light-white);
+      }
     }
   }
 
@@ -92,18 +91,20 @@ main {
   & .button-container {
     display: flex;
     flex-direction: column;
-    margin: 0 30px;
   }
 
   & button {
     background: var(--color-neutral-grey);
     color: var(--color-neutral-white);
-    padding: 15px 0;
+    padding: 15px;
     border-style: hidden;
-    margin-bottom: 20px;
     border-radius: 10px;
     font-weight: bold;
     transition: all 0.25s linear;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
 
     &:hover {
       background: var(--color-primary);
@@ -114,17 +115,11 @@ main {
 }
 
 .attribution {
-  font-size: 11px;
+  position: relative;
+  top: 30px;
+  font-size: 14px;
   text-align: center;
 }
 .attribution a {
   color: var(--color-attribution-link);
 }
-
-/* media queries */
-
-/* @media (min-width: 768px) {
-  main {
-    max-width: 30%;
-  }
-} */

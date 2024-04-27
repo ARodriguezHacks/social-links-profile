@@ -1,6 +1,6 @@
 # Frontend Mentor - Social links profile solution
 
-This is my solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Hello, my name is Angie and this is my solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ).
 
 ## Table of contents
 
@@ -11,6 +11,7 @@ This is my solution to the [Social links profile challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Challenges I faced](#challenges-i-faced)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -31,7 +32,7 @@ Desktop View
 ### Links
 
 - [Solution URL](https://github.com/ARodriguezHacks/social-links-profile)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site URL](https://arodriguezhacks.github.io/social-links-profile/)
 
 ## My process
 
@@ -51,7 +52,7 @@ The main learning goals I set for myself were: 1) to write cleaner code, and 2) 
 
 More specifically, I was interested in gaining practice with existing and newer CSS innovations. These included the `@font-face` at-rule (I'd always imported my fonts using the `@import` at-rule) and more notably native CSS nesting.
 
-I'm particularly proud of the CSS code below because it combines some new things I had yet to experience, mostly the opportunity to use nesting without a preprocesser (e.g., Sass).
+I'm particularly proud of this CSS code below because it combines some new things I had yet to experience, mostly the opportunity to use nesting without a preprocesser (e.g., Sass).
 
 ```css
 main {
@@ -62,7 +63,6 @@ main {
     padding: 15px;
     border-style: hidden;
     border-radius: 10px;
-    font-weight: bold;
     transition: all 0.25s linear;
 
     &:not(:last-child) {
@@ -79,12 +79,21 @@ main {
 }
 ```
 
+### Challenges I faced
+
+After deploying my solution to Github Pages, I saw the links to fonts were throwing 404s, leading me investigate the problem.
+
+I'm not certain what the actual solution was, but it gave me an opportunity to attempt another new CSS feature: Variable fonts. Rather than use the static font files during my first deploy, I was curious about the benefits of variable fonts and whether the file provided for this project would be better for deploying to production.
+
+After watching a couple of videos online, I felt my local solution was working properly again with these new changes, and I crossed my fingers in the hopes the errors would be resolved in production.
+
 ### Continued development
 
-Areas I'd like to practice for future and similar projects include:
+This was a great first project to brush up on my HTML and CSS skills, and for future and similar projects include, I look forward to delving more into:
 - Accessibility within HTML and CSS
 - BEM and other CSS writing best practices
 - Container queries
+- Everything web fonts and the various methods for using them in CSS and their trade offs
 
 ### Useful resources
 
@@ -94,3 +103,4 @@ Areas I'd like to practice for future and similar projects include:
 ## Author
 
 - Frontend Mentor - [@ARodriguezHacks](https://www.frontendmentor.io/profile/ARodriguezHacks)
+- LinkedIn - [Angie Rodriguez](https://www.linkedin.com/in/angierodriguezdev/)

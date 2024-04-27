@@ -1,6 +1,31 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Regular.ttf") format("truetype");
+}
+
 :root {
   box-sizing: border-box;
-  color: #fff;
+  /* color: #fff; */
+  font-family: "Inter";
+  --color-primary: hsl(75, 94%, 57%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-light-white: hsl(0, 0%, 76.47%);
+  --color-neutral-grey: hsl(0, 0%, 20%);
+  --color-neutral-dark-grey: hsl(0, 0%, 12%);
+  --color-neutral-off-black: hsl(0, 0%, 8%);
+  --color-attribution-link: hsl(228, 45%, 44%);
 }
 
 *,
@@ -9,40 +34,82 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  font-family: inherit;
+  color: var(--color-neutral-white);
 }
 
 body.app {
-  background: #141414;
+  background: var(--color-neutral-off-black);
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 50px 0;
   min-height: 100vh;
-  justify-content: center;
 }
 
 main {
-  background: #1f1f1f;
-  max-width: 30%;
+  background: var(--color-neutral-dark-grey);
+  max-width: 90%;
   border-radius: 10px;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  text-align: center;
+  padding: 30px 0;
+
+  @media (min-width: 768px) {
+    max-width: 30%;
+  }
 
   & div.avatar-container {
-
     & img {
       border-radius: 100px;
+      width: 30%;
+    }
+  }
+
+  & div.copy {
+    margin: 30px 0;
+
+    & p.copy-location {
+      color: var(--color-primary);
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    & p.copy-quote {
+      margin: 40px 0 25px;
+      color: var(--color-neutral-light-white);
     }
   }
 
   & h1 {
-    /* color: teal; */
+    line-height: 4rem;
+  }
+
+  & .button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
   }
 
   & button {
-    background: #e9e99a;
+    background: var(--color-neutral-grey);
+    color: var(--color-neutral-white);
+    padding: 15px 0;
+    border-style: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.25s linear;
+
+    &:hover {
+      background: var(--color-primary);
+      color: var(--color-neutral-grey);
+      cursor: pointer;
+    }
   }
 }
 
@@ -51,5 +118,13 @@ main {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-attribution-link);
 }
+
+/* media queries */
+
+/* @media (min-width: 768px) {
+  main {
+    max-width: 30%;
+  }
+} */

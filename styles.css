@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Inter";
-  src: local("Inter") url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
-    format("truetype");
+  font-family: 'Inter';
+  src: local('Inter') url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf')
+    format('truetype');
   font-weight: 400 600 700;
 }
 
@@ -18,7 +18,7 @@
 :root {
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   --color-primary: hsl(75, 94%, 57%);
   --color-neutral-white: hsl(0, 0%, 100%);
   --color-neutral-light-white: hsl(0, 0%, 76.47%);
@@ -46,78 +46,78 @@ body.app {
   justify-content: center;
 }
 
+h1 {
+  line-height: 4rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: var(--color-neutral-grey);
+  color: var(--color-neutral-white);
+  padding: 15px;
+  border-style: hidden;
+  border-radius: 10px;
+  transition: all 0.25s linear;
+}
+
+button:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+button:hover {
+  background: var(--color-primary);
+  color: var(--color-neutral-grey);
+  cursor: pointer;
+}
+
 main {
   background: var(--color-neutral-dark-grey);
   border-radius: 10px;
   margin: 0 auto;
   text-align: center;
   padding: 24px;
+}
 
-  @media (min-width: 768px) {
-    padding: 40px;
-    width: 384px;
-  }
+main div.avatar-container img {
+  border-radius: 50%;
+  width: 30%;
+}
 
-  & div.avatar-container {
-    & img {
-      border-radius: 50%;
-      width: 30%;
-    }
-  }
+main div.copy {
+  margin: 24px 0;
+}
 
-  & div.copy {
-    margin: 24px 0;
+main div.copy p.copy-location {
+  color: var(--color-primary);
+  font-size: 16px;
+}
 
-    & p.copy-location {
-      color: var(--color-primary);
-      font-size: 16px;
-    }
+main div.copy div.copy-quote-container {
+  margin-top: 24px;
+}
 
-    & div.copy-quote-container {
-      margin-top: 24px;
-
-      & p.copy-quote {
-        margin-top: 24px;
-        color: var(--color-neutral-light-white);
-      }
-    }
-  }
-
-  & h1 {
-    line-height: 4rem;
-  }
-
-  & .button-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  & button {
-    background: var(--color-neutral-grey);
-    color: var(--color-neutral-white);
-    padding: 15px;
-    border-style: hidden;
-    border-radius: 10px;
-    transition: all 0.25s linear;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
-
-    &:hover {
-      background: var(--color-primary);
-      color: var(--color-neutral-grey);
-      cursor: pointer;
-    }
-  }
+main div.copy-quote-container p.copy-quote {
+  margin-top: 24px;
+  color: var(--color-neutral-light-white);
 }
 
 .attribution {
   position: relative;
   top: 30px;
   text-align: center;
+}
 
-  & a {
-    color: var(--color-attribution-link);
+.attribution a {
+  color: var(--color-attribution-link);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 40px;
+    width: 384px;
   }
 }
